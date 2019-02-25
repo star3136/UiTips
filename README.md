@@ -3,6 +3,7 @@
 ## UiTips的功能介绍
 UiTips旨在统一app提示，保持全局风格一致。主要特点如下：
 - 绑定了Activity、Fragment生命周期
+- 每个绑定的Activity、Fragment中，只有一个同种类的View或者Dialog显示，显示位置居中
 - 扩展性强
 
 
@@ -20,11 +21,6 @@ UiTips.with(this)        //Activity或者Fragment
 UiTips.with(this)
         .loadingView()
         .hide();
-
-//没有设置content，会使用之前的content，所有的这类用法都遵循这一原则。下面的warnView()、loadingDialog()、warnDialog()不在赘述。
-UiTips.with(this)
-        .loadingView()
-        .show(parent);
 
 //当前的loading是否正在显示
 UiTips.with(this)
@@ -76,7 +72,6 @@ UiTips.with(this)
 ```
 
 ### Dialog类型的loading
-目前Dialog类型的加载样式也比较简单和固定。
 ```java
 //显示
 UiTips.with(this)            //Activity或Fragment
@@ -109,7 +104,7 @@ public interface IWarnDialog {
 //显示
 UiTips.with(this)            // Activity或Fragment
         .warnDialog()
-        .title("温馨提醒")       //设置标题
+        .title("温馨提醒")       //设置标题
         .content("您的VIP会员即将到期，请充值，以维持您尊贵的会员身份！")  //设置内容
         .okButtonText("充值")   //设置确定按钮的文本, 默认是 “确定”
         .okButtonClick(...)    //设置确定按钮的点击事件，默认是隐藏Dialog
