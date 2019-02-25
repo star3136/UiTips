@@ -218,7 +218,7 @@ allprojects {
 添加依赖:
 ```
 dependencies {
-        implementation 'com.github.star3136:UiTips:Tag'
+        implementation 'com.github.star3136:UiTips:version'
 }
 ```
 
