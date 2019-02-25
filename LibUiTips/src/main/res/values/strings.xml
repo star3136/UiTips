@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LibError</string>
+    <string name="ui_tips_ok">确定</string>
+    <string name="ui_tips_cancel">取消</string>
+</resources>
