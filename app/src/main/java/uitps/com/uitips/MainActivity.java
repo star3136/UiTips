@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 UiTips.with(this).warnView().type(IWarnView.EMPTY_DATA).content("数据为空").show(container);
                 break;
             case R.id.btn_show_loading_dialog:
-                UiTips.with(this).loadingDialog().content("正在加载").cancelable(false).show();
+                UiTips.with(this).loadingDialog().content("正在加载").show();
                 break;
             case R.id.btn_show_warn_dialog:
                 UiTips.with(this)
